@@ -22,11 +22,11 @@ export const Overview = () => {
         <p>
         ESD System Supervisor leverages the{" "}
           <code className="rounded-sm bg-muted-foreground/15 px-1.5 py-0.5">
-            Graph db and AI SDK
+           domain-expertise and state of an art technology stack
           </code>{" "}
-          functions in the server and the{" "}
+          which provide out of the box validation {" "}
           <code className="rounded-sm bg-muted-foreground/15 px-1.5 py-0.5">
-            domain-expertise of ESD controllers
+             of any disperncies of ESD controllers design
           </code>{" "}
         </p>
         <p>

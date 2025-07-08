@@ -24,10 +24,10 @@ export const Navbar = async () => {
           <History user={session?.user} />
           <div className="flex flex-row gap-2 items-center">
             <Image
-              src="/images/gemini-logo.png"
-              height={20}
-              width={20}
-              alt="gemini logo"
+              src="/images/lean-logo.svg"
+              height={120}
+              width={120}
+              alt="lean logo"
             />
             <div className="text-zinc-500">
               <SlashIcon size={16} />
@@ -45,7 +45,7 @@ export const Navbar = async () => {
                 className="py-1.5 px-2 h-fit font-normal"
                 variant="secondary"
               >
-                {session.user?.email}
+           Hi,     {session.user?.email}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

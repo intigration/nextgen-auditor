@@ -1,0 +1,15 @@
+Case ID,Prompt Scenario,Description,Purpose of Validation,Failure Mode,Effect,Cause
+1,Tag Name Mismatch,Design tag name differs from implemented tag,Ensure semantic alignment of signal references,Incorrect signal mapping,Wrong control execution,Tag aliasing or config error
+2,Trigger Logic Drift,Triggering logic in design differs from implementation,Ensure correct safety/control logic,Incorrect shutdown or activation,Failure to initiate or halt process,Logic change without review
+3,Unexpected Signal Behavior,Runtime tag value contradicts expected behavior,Catch invalid signal state,Invalid state transition,Unintended operation or alarm,Sensor glitch or logic fault
+4,Incomplete Tag Mapping,Tag defined in design is unmapped in runtime,Identify gaps in configuration,Missing logic or control,Inoperative safety/control path,Tag not deployed
+5,Redundant/Obsolete Logic,Deprecated logic still active in implementation,Remove legacy and unsafe code,Unexpected control behavior,Execution of invalid path,Old logic not cleaned
+6,Timing/Delay Inconsistencies,Execution delays differ from design expectation,Validate sequence response times,Missed timing window,Process or safety failure,Wrong delay settings
+7,Conflicting Interlocks,Two logic paths conflict or overlap,Ensure interlock consistency,Override conflict or lockout,Unreliable system behavior,Poor interlock design
+8,Design vs. Runtime Condition,Runtime behavior diverges from design logic,Validate logic under test inputs,Logic drift or broken path,Inaccurate process control,Outdated or incorrect logic
+9,Mode Transition Failures,Manual/Auto mode shift behaves incorrectly,Ensure proper transition logic,Unexpected system behavior,Operator confusion or unsafe state,Missing or faulty mode logic
+10,Bypassed Safety Layers,Implementation allows bypassing critical safety,Detect unsafe override conditions,Disabled fail-safes,Hazard to equipment or personnel,Unauthorized override logic
+11,Incorrect Logic Grouping,Logic placed under wrong functional hierarchy,Enforce architecture integrity,Wrong area response or scope,Scope violation,Design misalignment
+12,Unmodeled Scenarios,Implementation has logic absent from design,Capture undocumented paths,Undocumented behavior,Unvalidated failure response,Hidden code or quick fix
+13,Control Flow Anomalies,Dead paths or infinite loops in logic,Ensure clean control logic,Wasted compute or wrong outcome,Inconsistent logic navigation,Unclean implementation
+14,Missing Safety Validation Paths,No fail-safe paths implemented where expected,Enforce validation routines,Failure to detect issues,Increased hazard exposure,Validation logic omitted

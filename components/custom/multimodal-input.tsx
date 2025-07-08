@@ -19,18 +19,78 @@ import useWindowSize from "./use-window-size";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 
-const suggestedActions = [
+const suggestedActions =[
   {
-    title: "Help me book a flight",
-    label: "from San Francisco to London",
-    action: "Help me book a flight from San Francisco to London",
+    "title": "Mismatch in Tag Names",
+    "label": "Semantic Alignment",
+    "action": "Compare design tag names against implemented tags. Flag semantic mismatches (e.g., DS_HS0002 ≠ MOS01)."
   },
   {
-    title: "What is the status",
-    label: "of flight BA142 flying tmrw?",
-    action: "What is the status of flight BA142 flying tmrw?",
+    "title": "Trigger Logic Drift",
+    "label": "Safety Activation",
+    "action": "Audit triggering logic for safety systems. Verify design triggers match physical implementation (e.g., '15001 Manual ESD' vs. actual tag)."
   },
-];
+  {
+    "title": "Unexpected Signal Behavior",
+    "label": "Behavior Verification",
+    "action": "Monitor runtime signals against defined behavioral rules. Report state contradictions (e.g., HIGH state during non-fault conditions)."
+  },
+  {
+    "title": "Incomplete Tag Mapping",
+    "label": "Configuration Gap",
+    "action": "Cross-reference design tags with implementation. Identify unmapped or missing tags in deployed system."
+  },
+  {
+    "title": "Redundant or Obsolete Logic",
+    "label": "Legacy Cleanup",
+    "action": "Scan active logic blocks for deprecated components. Flag operational tags/logic marked obsolete in current design."
+  },
+  {
+    "title": "Timing/Delay Inconsistencies",
+    "label": "Response Timing",
+    "action": "Measure trigger-response sequences against design specs. Report delays >50ms or execution order mismatches."
+  },
+  {
+    "title": "Conflicting Interlocks",
+    "label": "Logic Integrity",
+    "action": "Analyze interlock relationships for conflicts. Identify logic causing ambiguous states (e.g., shutdown vs. override)."
+  },
+  {
+    "title": "Design vs. Runtime Condition",
+    "label": "Pathway Validation",
+    "action": "For validated input conditions, compare actual control sequences with design schematics. Document divergences."
+  },
+  {
+    "title": "Mode Transition Failures",
+    "label": "Control Predictability",
+    "action": "Test manual/auto mode transitions. Verify control behavior aligns with design specifications during switching."
+  },
+  {
+    "title": "Bypassed Safety Layers",
+    "label": "Risk Mitigation",
+    "action": "Trace all logic paths accessing safety interlocks. Identify undocumented bypass mechanisms or permanent overrides."
+  },
+  {
+    "title": "Incorrect Logic Grouping",
+    "label": "Architectural Compliance",
+    "action": "Audit functional group assignments. Flag misclassified elements (e.g., DS logic in OS hierarchy)."
+  },
+  {
+    "title": "Scenarios Not Modeled",
+    "label": "Undocumented Behavior",
+    "action": "Identify active logic without design documentation. Compile undocumented control scenarios (e.g., hardcoded triggers)."
+  },
+  {
+    "title": "Control Flow Anomalies",
+    "label": "Code Optimization",
+    "action": "Map all logic execution paths. Report dead code, infinite loops, or unused conditions absent from design."
+  },
+  {
+    "title": "Missing Safety Paths",
+    "label": "Fail-Safe Verification",
+    "action": "Verify existence of design-specified risk mitigations. Report critical paths lacking watchdogs or fallback routines."
+  }
+]
 
 export function MultimodalInput({
   input,
