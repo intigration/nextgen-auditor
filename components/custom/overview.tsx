@@ -20,26 +20,23 @@ export const Overview = () => {
           <MessageIcon />
         </p>
         <p>
-          This is an open source Chatbot template powered by the Google Gemini
-          model built with Next.js and the AI SDK by Vercel. It uses the{" "}
+        ESD System Supervisor leverages the{" "}
           <code className="rounded-sm bg-muted-foreground/15 px-1.5 py-0.5">
-            streamText
+            Graph db and AI SDK
           </code>{" "}
-          function in the server and the{" "}
+          functions in the server and the{" "}
           <code className="rounded-sm bg-muted-foreground/15 px-1.5 py-0.5">
-            useChat
+            domain-expertise of ESD controllers
           </code>{" "}
-          hook on the client to create a seamless chat experience.
         </p>
         <p>
           {" "}
-          You can learn more about the AI SDK by visiting the{" "}
+          Autonomous AI Agent{" "}
           <Link
             className="text-blue-500 dark:text-blue-400"
             href="https://sdk.vercel.ai/docs"
             target="_blank"
           >
-            Docs
           </Link>
           .
         </p>
